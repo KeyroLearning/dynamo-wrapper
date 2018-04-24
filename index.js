@@ -1,45 +1,46 @@
-import AWSDK from 'aws-sdk';
-import AWSXRay from 'aws-xray-sdk';
+'use strict';
+const AWSDK = require('aws-sdk')
+const AWSDK = require('aws-xray-sdk')
 
-const AWS = AWSXRay.captureAWS(AWSDK);
-const dynamoDb = new AWS.DynamoDB.DocumentClient();
+const AWS = AWSXRay.captureAWS(AWSDK)
+const dynamoDb = new AWS.DynamoDB.DocumentClient()
 
-export function scan(params) {
+exports.scan = (params) => {
   return new Promise((resolve, reject) =>
     dynamoDb.scan(params).promise()
       .then(data => resolve(data.Items))
       .catch(err => reject(err)),
-  );
+  )
 }
 
-export function get(params) {
+exports.get = (params) => {
   return new Promise((resolve, reject) =>
     dynamoDb.get(params).promise()
       .then(data => resolve(data.Item))
       .catch(err => reject(err)),
-  );
+  )
 }
 
-export function createItem(params) {
+exports.createItem = (params) => {
   return new Promise((resolve, reject) =>
     dynamoDb.put(params).promise()
       .then(() => resolve(params.Item))
       .catch(err => reject(err)),
-  );
+  )
 }
 
-export function updateItem(params, args) {
+exports.updateItem = (params, args) => {
   return new Promise((resolve, reject) =>
     dynamoDb.update(params).promise()
       .then(() => resolve(args))
       .catch(err => reject(err)),
-  );
+  )
 }
 
-export function deleteItem(params, args) {
+exports.deleteItem = (params, args) => {
   return new Promise((resolve, reject) =>
     dynamoDb.delete(params).promise()
       .then(() => resolve(args))
       .catch(err => reject(err)),
-  );
+  )
 }
