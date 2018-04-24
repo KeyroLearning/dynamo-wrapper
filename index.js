@@ -1,6 +1,6 @@
 'use strict';
 const AWSDK = require('aws-sdk')
-const AWSDK = require('aws-xray-sdk')
+const AWSXRay = require('aws-xray-sdk')
 
 const AWS = AWSXRay.captureAWS(AWSDK)
 const dynamoDb = new AWS.DynamoDB.DocumentClient()
