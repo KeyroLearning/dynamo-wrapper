@@ -2,7 +2,6 @@
   "name": "dynamo-wrapper",
   "description": "An aws dynamodb wrapper.",
   "version": "0.0.1",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "git@github.com:ActinuumLMS/dynamo-wrapper.git"
