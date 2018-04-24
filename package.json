@@ -1,0 +1,38 @@
+{
+  "name": "dynamo-wrapper",
+  "description": "An aws dynamodb wrapper.",
+  "version": "0.0.1",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ActinuumLMS/dynamo-wrapper.git"
+  },
+  "homepage": "https://github.com/ActinuumLMS/dynamo-wrapper",
+  "bugs": {
+    "url": "https://github.com/ActinuumLMS/fafiec-core/issues",
+    "email": "contact@nuthsell-lab.com"
+  },
+  "license": "LicenseRef-LICENSE",
+  "author": "Nutshell Lab <contact@nutshell-lab.com>",
+  "contributors": [
+    {
+      "name": "Sorian Slimani",
+      "email": "sorian.slimani@nutshell-lab.com",
+      "url": "https://github.com/RaisonBlue"
+    },
+    {
+      "name": "Victor Rebiard--Crépin",
+      "email": "victor.rebiardcrepin@nutshell-lab.com",
+      "url": "https://github.com/BlitzBanana"
+    },
+    {
+      "name": "Nathan Boutté",
+      "email": "nathan.boutte@nutshell-lab.com",
+      "url": "https://github.com/Thanith"
+    }
+  ],
+  "dependencies": {
+    "aws-xray-sdk": "^1.2.0",
+    "aws-sdk": "^2.192.0"
+  }
+}
